@@ -41,3 +41,4 @@
 
 2. **Authenticate with the Password**:
     Use the password you find within the ./level0
+    1fe8a524fa4bec01ca4ea2a869af2a02260d4a7d5fe7e7c24d8617e6dca12d3a
