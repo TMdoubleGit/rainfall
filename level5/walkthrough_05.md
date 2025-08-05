@@ -18,9 +18,11 @@
     The program is waiting for the user to insert an input, prints it back and then exits properly.
 
 2. **Trying to overflow the RET value**
-    The idea is to create an overflow on n() and to redirect its return adress to 0x080484a4 which is the on of o()
+    The idea is to create an overflow on n() and to redirect its return adress to 0x080484a4 which is the one of o()
 
     As n() does not return but calls exit() instead, we have to find exit()'s address, which is : 0x8049838
+    We found this address with the command :
+    objdump -R ./level5 | grep exit. 
 
     When n() will be called in the main(), o() will takeover and will execute the command /bin/sh which will allow us to read the password for the next level
 
@@ -42,3 +44,4 @@
 
 2. **Authenticate with the Password**:
     We used the password we found.
+    d3b7bf1025225bd715fa8ccb54ef06ca70b9125ac855aeab4878217177f41a31
